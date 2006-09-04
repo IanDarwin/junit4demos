@@ -1,7 +1,7 @@
 package testclasses;
 
 public class Foo {
-	private static final int DEFAULT_VALUE = 42;
+	public static final int DEFAULT_VALUE = 42;
 	private int value;
 
 	public Foo() {
@@ -9,6 +9,10 @@ public class Foo {
 	}
 
 	public Foo(int value) {
+		if (value < 0) {
+			throw new IllegalArgumentException(
+				String.format("Value %d must be non-negative", value));
+		}
 		this.value = value;
 	}
 
