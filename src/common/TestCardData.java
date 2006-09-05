@@ -16,16 +16,19 @@ public class TestCardData extends ValueObjectEqualsTest {
 	private static final CardType REF_CARD_TYPE = CardType.VISA;
 	private static final String REF_CARD_HOLDER = "Card. H. Older";
 
+	@Override
 	protected List<String> keyPropertyNames() {
 		return Arrays.asList(
 			new String[] { "type", "cardHolder", "cardNumber", "year", "month"});
 	}
 
+	@Override
 	protected Object createControlInstance() throws Exception {
 		return new CardData(
 				REF_CARD_HOLDER, REF_CARD_TYPE, REF_CARD_NUMBER, REF_EXP_YEAR, REF_EXP_MONTH);
 	}
 
+	@Override
 	protected Object createInstanceDiffersIn(String key) throws Exception {
 		if ("cardHolder".equals(key)) {
 			return new CardData("Donald Duck", REF_CARD_TYPE, REF_CARD_NUMBER, REF_EXP_YEAR, REF_EXP_MONTH);
