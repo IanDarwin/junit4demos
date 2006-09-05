@@ -14,11 +14,8 @@ public abstract class TestCardValidator extends TestCase {
 	public void testValidator() {
 		System.out.println("Testing using " + getClass().getName());
 		validator = getValidator();
-		String goodName = "Ian";
-		String goodNumber = getGoodNumber();
-		String badNumber = getBadNumber();
-		assertTrue(validator.validate(goodName, goodNumber, 2009, 05));
-		assertFalse(validator.validate(goodName, badNumber, 2009, 05));
+		assertTrue(validator.validate("Ian", getGoodNumber(), 2009, 05));
+		assertFalse(validator.validate("Ian", getBadNumber(), 2009, 05));
 		// etc...
 	}
 }
