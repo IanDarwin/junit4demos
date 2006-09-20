@@ -2,12 +2,11 @@ package suites;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Modifier;
+
+import junit.framework.Test;
 
 import com.gargoylesoftware.base.testing.RecursiveTestSuite;
 import com.gargoylesoftware.base.testing.TestFilter;
-
-import junit.framework.Test;
 
 public class AllTestsRecursively {
 
