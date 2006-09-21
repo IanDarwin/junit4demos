@@ -7,8 +7,8 @@ import junit.framework.TestCase;
 
 public class TestCalendarSettersGetters extends TestCase {
 
-	Calendar c = Calendar.getInstance();
-	Date d = new Date();
+	protected Calendar c = Calendar.getInstance();
+	protected Date d = new Date();
 
 	public void testGetSetTime() {
 		c.setTime(d);
