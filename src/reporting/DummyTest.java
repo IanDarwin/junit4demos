@@ -20,7 +20,7 @@ public class DummyTest extends TestCase {
 		assertTrue(true);
 	}
 
-	public void testGlumph() {
+	public void testGlumph() { // Expected to fail
 		assertEquals("etaoin shrdlu", "etaoin shurdlu");
 	}
 }
