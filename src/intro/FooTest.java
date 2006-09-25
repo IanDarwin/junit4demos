@@ -27,6 +27,14 @@ public class FooTest {
 		assertEquals(42, value);
 	}
 
+	/** This method is called foo() instead of testFoo()
+	 * to show that you can do that in JUnit 4; just
+	 * don't forget the @Test annotation!
+	 */
+	@Test public void foo() throws Exception {
+		System.out.println("FooTest.foo()");
+	}
+
 	/** This is missing its @After tag deliberately, to show
 	 * that with out it, *this method does not get called in JUnit 4*
 	 */
