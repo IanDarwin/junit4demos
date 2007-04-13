@@ -21,7 +21,7 @@ public class TestXSLTwithXPath extends XMLTestCase {
 				new StreamSource(new File(STYLE_FILE)));
 
 		// Use its transform() method to perform the transformation
-		tx.transform(new StreamSource(new File(INPUT_FILE)), // not 1
+		tx.transform(new StreamSource(new File(INPUT_FILE)),
 				new StreamResult(out));
 
 		// Get the result
@@ -33,6 +33,7 @@ public class TestXSLTwithXPath extends XMLTestCase {
 		System.out.println(document);
 
 		// Now use XMLUnit over XPath
+		assertXpathExists("/html/body/table/tr/th", document);
 		assertXpathExists("//th", document);
 		assertXpathEvaluatesTo("Name", "//th", document);
 	}
