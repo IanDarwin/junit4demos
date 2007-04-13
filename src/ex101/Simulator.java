@@ -1,11 +1,18 @@
 package ex101;
 
 public class Simulator {
-	HardwareBox box = new HardwareBox();
+
+	HardwareBox box;
+
 	public static void main(String[] args) {
-		new Simulator().simulate();
+		new Simulator(new HardwareBox()).simulate();
 	}
-	private void simulate() {
+
+	public Simulator(HardwareBox box) {
+		this.box = box;
+	}
+
+	public void simulate() {
 		System.out.println("Starting run with " + box.getModel());
 		box.initialize();
 		box.doSomeWork();
