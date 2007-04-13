@@ -3,6 +3,9 @@ package sol101;
 import org.jmock.Mock;
 import org.jmock.MockObjectTestCase;
 
+import ex101.HardwareBox;
+import ex101.Simulator;
+
 public class SimulatorTest extends MockObjectTestCase {
 
 	public void setUp() throws Exception {
@@ -21,6 +24,8 @@ public class SimulatorTest extends MockObjectTestCase {
 
 		// run it
 		new Simulator(hb).simulate();
+
+		hbmock.verify();
 
 	}
 }

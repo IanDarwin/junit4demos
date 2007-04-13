@@ -12,12 +12,10 @@ public class HardwareBoxImpl implements HardwareBox {
 
 	public void initialize() {
 		// TODO Auto-generated method stub
-
 	}
 
 	public void reset() {
 		// TODO Auto-generated method stub
-
 	}
 
 }
