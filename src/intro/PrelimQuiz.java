@@ -5,7 +5,7 @@ import java.util.Vector;
 
 /**
  * A kind of mini-test: how much of this code could you
- * explain to a Java newbie.
+ * explain to a Java newbie?
  * @version Java 1.5 version!
  */
 public class PreTest extends AnotherClass implements Runnable {
@@ -21,7 +21,7 @@ public class PreTest extends AnotherClass implements Runnable {
             }
     };
 
-
+    // Seem incomplete? Keep reading...
 
 
 

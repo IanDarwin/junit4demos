@@ -1,6 +1,7 @@
 package intro;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -31,21 +32,27 @@ public class FooTest {
 	 * to show that you can do that in JUnit 4; just
 	 * don't forget the @Test annotation!
 	 */
-	@Test public void foo() throws Exception {
+	@Test
+	public void foo() throws Exception {
 		System.out.println("FooTest.foo()");
+	}
+	
+	/** This is a 3.8-style test method */
+	public void testFoo() {
+		System.out.println("FooTest.testFoo()");
 	}
 
 	/** This is missing its @After tag deliberately, to show
 	 * that with out it, *this method does not get called in JUnit 4*
 	 */
 	public void tearDown() {
-		System.out.println("FooTest.tearDown()");
+		fail("FooTest.tearDown()");
 	}
 
 	/** This is missing its @After tag deliberately, to show
 	 * that with out it, *this method does not get called in JUnit 4*
 	 */
 	public static void tearDownAfterClass() throws Exception {
-		System.out.println("FooTest.tearDownAfterClass()");
+		fail("FooTest.tearDownAfterClass()");
 	}
 }

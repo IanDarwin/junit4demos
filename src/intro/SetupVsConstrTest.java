@@ -1,21 +1,18 @@
 package intro;
 
-import junit.framework.TestCase;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
-public class SetupVsConstrTest extends TestCase{
+/** Running this can show you something about how tests
+ * get run - notice when the constructor is called.
+ */
+public class SetupVsConstrTest {
 
 	public SetupVsConstrTest() {
 		super();
 		System.out.println("SetupVsConstrTest.SetupVsConstrTest()");
-	}
-
-	public SetupVsConstrTest(String arg0) {
-		super(arg0);
-		System.out.printf("SetupVsConstrTest.SetupVsConstrTest(%s) in %s%n",
-			arg0, Thread.currentThread().getName());
 	}
 
 	@Before
@@ -28,14 +25,17 @@ public class SetupVsConstrTest extends TestCase{
 		System.out.println("SetupVsConstrTest.tearDown()");
 	}
 
+	@Test
 	public void testOne() {
 		System.out.println("SetupVsConstrTest.testOne()");
 	}
 
+	@Test
 	public void testTwo() {
 		System.out.println("SetupVsConstrTest.testTwo()");
 	}
 
+	@Test
 	public void testThree() {
 		System.out.println("SetupVsConstrTest.testThree()");
 	}
