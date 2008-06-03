@@ -1,26 +1,21 @@
 package reporting;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
 
 /**
  * Some tests that pass and some that fail,
  * just to show the Reporting in action.
  */
-public class Dummy2Test extends TestCase {
+public class Dummy2Test  {
 
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
-	protected void tearDown() throws Exception {
-		super.tearDown();
-	}
-
-	public void testSize() {
+	@Test public void testSize() {
 		assertTrue(true);
 	}
 
-	public void testGlumph() {
+	@Test public void testGlumph() {
 		assertEquals("etaoin shrdlu", "etaoin shrdlu");
 	}
 }

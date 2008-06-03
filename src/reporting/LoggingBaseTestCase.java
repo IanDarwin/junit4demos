@@ -3,9 +3,8 @@ package reporting;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import junit.framework.TestCase;
-
-public class LoggingBaseTestCase extends TestCase {
+public class LoggingBaseTestCase  {
+	
 	Logger logger = Logger.getLogger(getClass().getName());
 
 	public LoggingBaseTestCase() {
