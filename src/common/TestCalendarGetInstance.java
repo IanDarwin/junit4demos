@@ -1,28 +1,30 @@
 package common;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class TestCalendarGetInstance extends TestCase {
+public class TestCalendarGetInstance  {
 
 	Date d = new Date();
 
-	public void testGetInstance() {
+	@Test public void testGetInstance() {
 		Calendar c = Calendar.getInstance();
 		assertEquals("day of month", d.getDate(), c.get(Calendar.MONTH));
 	}
 
-	public void testGetInstanceTimeZone() {
+	@Test public void testGetInstanceTimeZone() {
 		Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
 		assertEquals("day of month", d.getDate(), c.get(Calendar.MONTH));
 	}
 
 
-	public void testGetInstanceLocale() {
+	@Test public void testGetInstanceLocale() {
 		Calendar c = Calendar.getInstance(Locale.CANADA);
 		assertEquals("day of month", d.getDate(), c.get(Calendar.MONTH));
 	}

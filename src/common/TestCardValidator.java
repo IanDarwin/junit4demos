@@ -1,9 +1,13 @@
 package common;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
 import testclasses.CreditCardValidator;
 
-public abstract class TestCardValidator extends TestCase {
+public abstract class TestCardValidator  {
 
 	protected CreditCardValidator validator;
 
@@ -11,7 +15,7 @@ public abstract class TestCardValidator extends TestCase {
 	public abstract String getGoodNumber();
 	public abstract String getBadNumber();
 
-	public void testValidator() {
+	@Test public void testValidator() {
 		System.out.println("Testing using " + getClass().getName());
 		validator = getValidator();
 		assertTrue(validator.validate("Ian", getGoodNumber(), 2009, 05));

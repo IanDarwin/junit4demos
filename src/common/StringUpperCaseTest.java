@@ -1,14 +1,16 @@
 package common;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.assertEquals;
 
-public class StringUpperCaseTest extends TestCase {
-	public void test1() {
+import org.junit.Test;
+
+public class StringUpperCaseTest  {
+	@Test public void test1() {
 		String x = "Hello world";
 		String y = x.toUpperCase();
 		assertEquals(11, y.length());
 	}
-	public void test2() {
+	@Test public void test2() {
 		String x = "Hello world";
 		String y = x.toUpperCase();
 		assertEquals('E', y.charAt(1));

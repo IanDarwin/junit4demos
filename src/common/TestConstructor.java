@@ -1,16 +1,18 @@
 package common;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
 
 import testclasses.Foo;
-import junit.framework.TestCase;
 
-public class TestConstructor extends TestCase {
+public class TestConstructor  {
 
-	public void testFoo() {
+	@Test public void testFoo() {
 		Foo f = new Foo();
 		assertEquals(Foo.DEFAULT_VALUE, f.getValue());
 	}
 
-	public void testFooInt() {
+	@Test public void testFooInt() {
 		Foo f = new Foo(123);
 		assertEquals(123, f.getValue());
 	}

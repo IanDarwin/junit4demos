@@ -1,12 +1,14 @@
 package common;
 
+import org.junit.Test;
+
 import testclasses.Foo;
-import junit.framework.TestCase;
+
 import com.gargoylesoftware.base.testing.EqualsTester;
 
-public class TestEqualsWithEqualsTester extends TestCase {
+public class TestEqualsWithEqualsTester  {
 
-	public void testEquals() {
+	@Test public void testEquals() {
 		Foo f = new Foo();	// original
 		System.out.println(f);
 		Foo g = new Foo();	// equal

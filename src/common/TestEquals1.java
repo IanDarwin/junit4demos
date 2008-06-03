@@ -1,19 +1,24 @@
 package common;
 
-import testclasses.Foo;
-import junit.framework.TestCase;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
-public class TestEquals1 extends TestCase {
+import org.junit.Test;
+
+import testclasses.Foo;
+
+public class TestEquals1  {
 	Foo x, y;
 
-	public void testReflexive() {
+	@Test public void testReflexive() {
 		assertNotNull(x);	// loaded in setUp()
 		assertTrue(x.equals(x));
 	}
-	public void testSymmetric() {
+	@Test public void testSymmetric() {
 		assertTrue(x.equals(y) && y.equals(x));
 	}
-	public void testNull() {
+	@Test public void testNull() {
 		assertFalse(x.equals(null));
 	}
 

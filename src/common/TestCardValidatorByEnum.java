@@ -1,15 +1,18 @@
 package common;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
 import testclasses.CardType;
 import testclasses.CreditCardValidator;
 import testclasses.CreditCardValidatorFactory;
 
-public class TestCardValidatorByEnum extends TestCase {
+public class TestCardValidatorByEnum  {
 
 	protected CreditCardValidator validator;
 
-	public void testValidator() {
+	@Test public void testValidator() {
 		String goodName = "Ian";
 
 		for (CardType type : CardType.values()) {

@@ -1,11 +1,14 @@
 package common;
 
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
 import testclasses.Foo;
-import junit.framework.TestCase;
 
-public class TestShouldThrow extends TestCase {
+public class TestShouldThrow  {
 
-	public void testShouldThrow() {
+	@Test public void testShouldThrow() {
 		// Ensure that new Foo(-1) throws IAE
 		try {
 			new Foo(-1);

@@ -9,17 +9,17 @@ public class IntegerCompareTest extends ComparabilityTestCase {
 	}
 
 	@Override
-	protected Comparable createLessInstance() throws Exception {
+	protected Comparable<Integer> createLessInstance() throws Exception {
 		return new Integer(14);
 	}
 
 	@Override
-	protected Comparable createEqualInstance() throws Exception {
+	protected Comparable<Integer> createEqualInstance() throws Exception {
 		return new Integer(30);
 	}
 
 	@Override
-	protected Comparable createGreaterInstance() throws Exception {
+	protected Comparable<Integer> createGreaterInstance() throws Exception {
 		return new Integer(65);
 	}
 }
