@@ -8,13 +8,10 @@ import testclasses.Foo;
 
 public class TestShouldThrow  {
 
-	@Test public void testShouldThrow() {
+	@Test(expected=IllegalArgumentException.class)
+	public void testShouldThrow() {
 		// Ensure that new Foo(-1) throws IAE
-		try {
-			new Foo(-1);
-			fail("Did not throw IAE");
-		} catch (IllegalArgumentException e) {
-			System.out.println("Caught expected exception: " + e);
-		}
+		new Foo(-1);
+		fail("Did not throw IAE");
 	}
 }
