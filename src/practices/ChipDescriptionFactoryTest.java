@@ -1,25 +1,27 @@
 package practices;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
 import java.lang.reflect.Modifier;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class ChipDescriptionFactoryTest extends TestCase {
+public class ChipDescriptionFactoryTest  {
 
 	ChipDescription x = null;
 
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
+	@Test
 	public void testCreateChipDescription() {
 		x = ChipDescriptionFactory.createChipDescription("Ti1234");
 		assertTrue(x instanceof TI1234ChipDesc);
-		Class c = x.getClass();
+		Class<? extends ChipDescription> c = x.getClass();
 		// Our chip description must not be abstract
 		assertFalse(Modifier.isAbstract(c.getModifiers()));
 	}
 
+	@Test
 	public void testCreateChipBadDescription() {
 		try {
 			ChipDescriptionFactory.createChipDescription("goofus");
@@ -29,6 +31,7 @@ public class ChipDescriptionFactoryTest extends TestCase {
 		}
 	}
 
+	@Test
 	public void testCreateChipBadClass() {
 		try {
 			ChipDescriptionFactory.createChipDescription("test1");
@@ -38,6 +41,7 @@ public class ChipDescriptionFactoryTest extends TestCase {
 		}
 	}
 
+	@Test
 	public void testCreateChipNotDescription() {
 		try {
 			ChipDescriptionFactory.createChipDescription("test2");
