@@ -17,7 +17,7 @@ public class PreTest extends AnotherClass implements Runnable {
             void methodX() {
                     System.out.println( // Hard question
                     		"What does this print: " + getClass().getName());
-                    super.methodX();        // why?
+                    super.methodX();        // where does this go?
             }
     };
 
