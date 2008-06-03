@@ -4,8 +4,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/** A fairly simple implementation of the Factory pattern,
+ * for creating ChipDescription objects.
+ */
 public class ChipDescriptionFactory {
-	private static final String CHIPTYPES_PROPERTIES = "files/chiptypes.properties";
+	
+	private static final String CHIPTYPES_PROPERTIES =
+		"files/chiptypes.properties";
 	static Properties properties = new Properties();
 
 	static {
@@ -27,9 +32,9 @@ public class ChipDescriptionFactory {
         	throw new RuntimeException("Error: no chip class for type: " + type);
         }
 
-        Class chipClass = null;
+        Class<? extends ChipDescription> chipClass = null;
         try {
-            chipClass = Class.forName(chipDescClassName);
+            chipClass = (Class<? extends ChipDescription>) Class.forName(chipDescClassName);
         } catch (ClassNotFoundException e) {
             String message = "Error: class " + chipDescClassName + " not found!";
 			System.err.println(message);
@@ -38,10 +43,6 @@ public class ChipDescriptionFactory {
             throw new RuntimeException(e.toString(), e);
         }
 
-        if (!ChipDescription.class.isAssignableFrom(chipClass)) {
-        	throw new RuntimeException(
-        			"Class " + chipClass + " is not a ChipDescription");
-        }
         try {
         	chip = (ChipDescription) chipClass.newInstance();
         } catch (Exception e) {
