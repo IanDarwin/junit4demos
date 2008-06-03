@@ -1,17 +1,13 @@
 package intro;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
+import junit.framework.TestCase;
 
-public class AllTests {
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-	public static Test suite() {
-		TestSuite suite = new TestSuite("Test for intro");
-		//$JUnit-BEGIN$
-		suite.addTestSuite(FooTest.class);
-		suite.addTestSuite(TestString.class);
-		//$JUnit-END$
-		return suite;
-	}
-
+@RunWith(value=Suite.class)
+@SuiteClasses(value={FooTest.class, TestString.class})
+public class AllTests extends TestCase {
+	// No code needed!
 }

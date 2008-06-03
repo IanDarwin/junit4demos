@@ -1,17 +1,13 @@
 package reporting;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
+@RunWith(value=Suite.class)
+@SuiteClasses(value={DummyTest.class, Dummy2Test.class})
 public class AllTests {
 
-	public static Test suite() {
-		TestSuite suite = new TestSuite("Test for reporting");
-		//$JUnit-BEGIN$
-		suite.addTestSuite(DummyTest.class);
-		suite.addTestSuite(Dummy2Test.class);
-		//$JUnit-END$
-		return suite;
-	}
+	// No actual code needed here, for simple cases
 
 }
