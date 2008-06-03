@@ -29,8 +29,9 @@ public class FooTest {
 	}
 
 	/** This method is called foo() instead of testFoo()
-	 * to show that you can do that in JUnit 4; just
-	 * don't forget the @Test annotation!
+	 * to show that the method name doesn't matter!
+	 * It *might* be a good idea to stick with the testXXX
+	 * method name convention, or not...
 	 */
 	@Test
 	public void foo() throws Exception {
