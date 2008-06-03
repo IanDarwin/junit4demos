@@ -8,7 +8,7 @@ import java.util.Vector;
  * explain to a Java newbie?
  * @version Java 1.5 version!
  */
-public class PreTest extends AnotherClass implements Runnable {
+public class PrelimQuiz extends AnotherClass implements Runnable {
 
 	List<String> stuff = new Vector<String>();
 
@@ -38,7 +38,7 @@ public class PreTest extends AnotherClass implements Runnable {
 
     // Everything below this line is just to make the example compile.
     public static void main(String[] args) {
-		new PreTest().bar.methodX();
+		new PrelimQuiz().bar.methodX();
 	}
 
 	public void run() {
