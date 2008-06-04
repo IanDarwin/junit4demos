@@ -15,18 +15,18 @@ public class TestCalendarGetInstance  {
 
 	@Test public void testGetInstance() {
 		Calendar c = Calendar.getInstance();
-		assertEquals("day of month", d.getDate(), c.get(Calendar.MONTH));
+		assertEquals("day of month", d.getDate(), c.get(Calendar.DAY_OF_MONTH));
 	}
 
 	@Test public void testGetInstanceTimeZone() {
 		Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
-		assertEquals("day of month", d.getDate(), c.get(Calendar.MONTH));
+		assertEquals("day of month", d.getDate(), c.get(Calendar.DAY_OF_MONTH));
 	}
 
 
 	@Test public void testGetInstanceLocale() {
 		Calendar c = Calendar.getInstance(Locale.CANADA);
-		assertEquals("day of month", d.getDate(), c.get(Calendar.MONTH));
+		assertEquals("day of month", d.getDate(), c.get(Calendar.DAY_OF_MONTH));
 	}
 
 

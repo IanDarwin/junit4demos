@@ -4,6 +4,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import testclasses.Foo;
@@ -23,6 +24,7 @@ public class TestEquals1  {
 	}
 
 	// Do not include in printing
+	@Before
 	public void setUp() {
 		x = new Foo();
 		y = new Foo();

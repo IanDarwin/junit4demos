@@ -9,7 +9,7 @@ public class StringUpperCaseTest2  {
 	String y;
 
 	@Before
-	protected void setUp() throws Exception {
+	public void setUp() throws Exception {
 		String x = "Hello world";
 		y = x.toUpperCase();
 	}

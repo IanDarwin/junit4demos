@@ -15,7 +15,8 @@ public abstract class TestCardValidator  {
 	public abstract String getGoodNumber();
 	public abstract String getBadNumber();
 
-	@Test public void testValidator() {
+	@Test
+	public void testValidator() {
 		System.out.println("Testing using " + getClass().getName());
 		validator = getValidator();
 		assertTrue(validator.validate("Ian", getGoodNumber(), 2009, 05));
