@@ -34,7 +34,10 @@ public class PrelimQuiz extends AnotherClass implements Runnable {
 
 
 
-
+    // When does this get called?
+    void methodX() {
+    	System.out.println("PrelimQuiz.methodX()");
+    }
 
     // Everything below this line is just to make the example compile.
     public static void main(String[] args) {
@@ -44,8 +47,11 @@ public class PrelimQuiz extends AnotherClass implements Runnable {
 	public void run() {
 		System.out.println("PreTest.run()");
 	}
+	
 	private abstract class Foo {
-		void methodX() { }
+		void methodX() {
+			System.out.println("Foo.methodX()");
+		}
 	}
 }
 
