@@ -50,7 +50,7 @@ public class FooTest {
 		fail("FooTest.tearDown()");
 	}
 
-	/** This is missing its @After tag deliberately, to show
+	/** This is missing its @AfterClass tag deliberately, to show
 	 * that with out it, *this method does not get called in JUnit 4*
 	 */
 	public static void tearDownAfterClass() throws Exception {
