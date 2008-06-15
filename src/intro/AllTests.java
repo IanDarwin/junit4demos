@@ -7,7 +7,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 /**
- * X is a Y.
+ * AllTests for intro.
  */
 @RunWith(value=Suite.class)
 @SuiteClasses(value={FooTest.class, FooTest2.class,
