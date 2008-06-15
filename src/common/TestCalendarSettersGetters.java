@@ -26,7 +26,8 @@ public class TestCalendarSettersGetters  {
 		}
 	}
 
-	@Test public void testGet() {
+	@Test @SuppressWarnings("deprecation")
+	public void testGet() {
 		// One hates to use deprecated methods, but we need a
 		// way of getting the year that is system independant
 		// and also does not depend on correct working of Calendar.
@@ -34,7 +35,8 @@ public class TestCalendarSettersGetters  {
 		assertEquals(c.get(Calendar.YEAR), 1900 + d.getYear());
 	}
 
-	@Test public void testSetIntInt() {
+	@Test @SuppressWarnings("deprecation")
+	public void testSetIntInt() {
 		c.set(Calendar.DAY_OF_MONTH, c.get(Calendar.DAY_OF_MONTH) + 30);
 		assertEquals("set day_of_month rolls month",
 				c.get(Calendar.MONTH), d.getMonth() + 1);
