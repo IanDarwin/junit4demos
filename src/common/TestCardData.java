@@ -23,29 +23,36 @@ public class TestCardData extends ValueObjectEqualsTest {
 	}
 
 	@Override
-	protected Object createControlInstance() throws Exception {
+	protected Object createControlInstance() {
 		return new CardData(
 				REF_CARD_HOLDER, REF_CARD_TYPE, REF_CARD_NUMBER, REF_EXP_YEAR, REF_EXP_MONTH);
 	}
 
 	@Override
 	protected Object createInstanceDiffersIn(String key) throws Exception {
+		CardData ref = (CardData) createControlInstance();
 		if ("cardHolder".equals(key)) {
-			return new CardData("Donald Duck", REF_CARD_TYPE, REF_CARD_NUMBER, REF_EXP_YEAR, REF_EXP_MONTH);
+			ref.setCardHolder("Donald Duck");
+			return ref;
 		}
 		if ("type".equals(key)) {
-			return new CardData(REF_CARD_HOLDER, CardType.MASTERCARD, REF_CARD_NUMBER, REF_EXP_YEAR, REF_EXP_MONTH);
+			ref.setCardType( CardType.MASTERCARD);
+			return ref;
 		}
 		if ("cardNumber".equals(key)) {
-			return new CardData(REF_CARD_HOLDER, REF_CARD_TYPE, "123", REF_EXP_YEAR, REF_EXP_MONTH);
+			ref.setCardNumber("123");
+			return ref;
 		}
 		if ("year".equals(key)) {
-			return new CardData(REF_CARD_HOLDER, REF_CARD_TYPE, REF_CARD_NUMBER, 2112, REF_EXP_MONTH);
+			ref.setYear(REF_EXP_YEAR + 1);
+			return ref;
 		}
 		if ("month".equals(key)) {
-			return new CardData(REF_CARD_HOLDER, REF_CARD_TYPE, REF_CARD_NUMBER, REF_EXP_YEAR, 1);
+			ref.setMonth(REF_EXP_MONTH + 1);
+			return ref;
 		}
-		System.out.println("WARNING did not match " + key);
-		return null;
+		throw new AssertionError(
+			String.format("createInstanceDiffersIn(%s) - no case for key", key));
+
 	}
 }
