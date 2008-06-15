@@ -18,7 +18,10 @@ public class TestCalendarGetInstance  {
 		assertEquals("day of month", d.getDate(), c.get(Calendar.DAY_OF_MONTH));
 	}
 
-	@Test public void testGetInstanceTimeZone() {
+	/* Removed the @Test from this method as it necessarily fails
+	 * when run within (our time zone - GMT) hours of midnight!
+	 */
+	public void testGetInstanceTimeZone() {
 		Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
 		assertEquals("day of month", d.getDate(), c.get(Calendar.DAY_OF_MONTH));
 	}
