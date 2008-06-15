@@ -9,11 +9,7 @@ public class Foo {
 	}
 
 	public Foo(int value) {
-		if (value < 0) {
-			throw new IllegalArgumentException(
-				String.format("Value %d must be non-negative", value));
-		}
-		this.value = value;
+		setValue(value);
 	}
 
 	public boolean equals(Object o) {
@@ -30,6 +26,10 @@ public class Foo {
 	}
 
 	public void setValue(int value) {
+		if (value < 0) {
+			throw new IllegalArgumentException(
+				String.format("Value %d must be non-negative", value));
+		}
 		this.value = value;
 	}
 
