@@ -13,7 +13,7 @@ public class TestEquals1  {
 	Foo x, y;
 
 	@Test public void testReflexive() {
-		assertNotNull(x);	// loaded in setUp()
+		assertNotNull(x);	// loaded in @Before method
 		assertTrue(x.equals(x));
 	}
 	@Test public void testSymmetric() {
