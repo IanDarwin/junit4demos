@@ -8,7 +8,7 @@ public class VisaCardValidator implements CreditCardValidator {
 			return false;
 		if (cardHolderName.contains("Duck"))
 			return false;
-		// more tests needed...
+		System.out.println("more tests needed...");
 		return true;
 	}
 
