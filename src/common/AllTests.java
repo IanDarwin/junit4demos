@@ -8,13 +8,12 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(value=Suite.class)
 @SuiteClasses(value={
-	IntegerCompareTest.class,
+	ComparabilityTestInteger.class,
 	StringUpperCaseTest.class,
 	StringUpperCaseTest2.class,
 	TestCalendarGetInstance.class,
 	TestCalendarSettersGetters.class,
 	TestCardData.class,
-	//TestCardValidator.class,
 	TestCardValidatorByEnum.class,
 	TestConstructor.class,
 	TestEquals1.class,

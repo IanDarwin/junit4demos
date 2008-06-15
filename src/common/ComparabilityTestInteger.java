@@ -2,9 +2,9 @@ package common;
 
 import junitx.extensions.ComparabilityTestCase;
 
-public class IntegerCompareTest extends ComparabilityTestCase {
+public class ComparabilityTestInteger extends ComparabilityTestCase {
 
-	public IntegerCompareTest(String arg0) {
+	public ComparabilityTestInteger(String arg0) {
 		super(arg0);
 	}
 
