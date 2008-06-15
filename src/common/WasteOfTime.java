@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import testclasses.Foo;
@@ -24,8 +23,9 @@ public class WasteOfTime  {
 		assertEquals(list1, list2);
 	}
 	
-	@Ignore("was in once to prove that assertEquals does note differences")
-	@Test public void testFailureInBetterWay() {
+	// prove that assertEquals does note differences
+	@Test(expected=AssertionError.class) 
+	public void testFailureInBetterWay() {
 		list2.set(3, new Foo(123));
 		assertEquals(list1, list2);
 	}
