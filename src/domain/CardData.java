@@ -1,16 +1,16 @@
 package testclasses;
 
 public class CardData {
-	CardType type;
-	String cardHolder;
-	String cardNumber;
-	int year;
-	int month;
+	private CardType cardType;
+	private String cardHolder;
+	private String cardNumber;
+	private int year;
+	private int month;
 
 	public CardData(String cardHolder, CardType type, String cardNumber, int year, int month) {
 		super();
 		this.cardHolder = cardHolder;
-		this.type = type;
+		this.cardType = type;
 		this.cardNumber = cardNumber;
 		this.year = year;
 		this.month = month;
@@ -22,7 +22,7 @@ public class CardData {
 			return true;
 		if (o != null && o.getClass() == this.getClass()) {
 			CardData co = (CardData)o;
-			if (type != co.type ||
+			if (cardType != co.cardType ||
 				unequal(cardHolder, co.cardHolder) ||
 				unequal(cardNumber, co.cardNumber) ||
 				year != co.year ||
@@ -46,11 +46,52 @@ public class CardData {
 
 	@Override
 	public String toString() {
-		return cardHolder + type + cardNumber + year + month;
+		return cardHolder + cardType + cardNumber + year + month;
 	}
 
 	@Override
 	public int hashCode() {
 		return cardHolder.hashCode()|cardNumber.hashCode()|year<<10|month;
 	}
+
+	public String getCardHolder() {
+		return cardHolder;
+	}
+
+	public void setCardHolder(String cardHolder) {
+		this.cardHolder = cardHolder;
+	}
+
+	public String getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public CardType getCardType() {
+		return cardType;
+	}
+
+	public void setCardType(CardType type) {
+		this.cardType = type;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
 }
