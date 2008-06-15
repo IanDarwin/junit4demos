@@ -15,11 +15,11 @@ public class SomeOrderTest extends TestCase {
 		super(name);
 	}
 
-	public void testInsert() {
-		System.out.println("SomeOrderTest.testInsert()");
-	}
 	public void testFetch() {
 		System.out.println("SomeOrderTest.testFetch()");
+	}
+	public void testInsert() {
+		System.out.println("SomeOrderTest.testInsert()");
 	}
 	public void testTwo() {
 		System.out.println("SomeOrderTest.testTwo()");
