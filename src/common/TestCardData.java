@@ -8,6 +8,9 @@ import testclasses.CardType;
 
 import com.diasparsoftware.util.junit.ValueObjectEqualsTest;
 
+/** Example for "equals-test a big object" - lots of fields -
+ * using ValueObjectEqualsTest.
+ */
 public class TestCardData extends ValueObjectEqualsTest {
 
 	private static final int REF_EXP_MONTH = 8;
@@ -28,6 +31,10 @@ public class TestCardData extends ValueObjectEqualsTest {
 				REF_CARD_HOLDER, REF_CARD_TYPE, REF_CARD_NUMBER, REF_EXP_YEAR, REF_EXP_MONTH);
 	}
 
+	/** This has to create a copy of the target that differs
+	 * ONLY in the field named in "key" from the Control Instance.
+	 * Try to make this resilient to changes in the Control Instance!
+	 */
 	@Override
 	protected Object createInstanceDiffersIn(String key) throws Exception {
 		CardData ref = (CardData) createControlInstance();
@@ -36,7 +43,13 @@ public class TestCardData extends ValueObjectEqualsTest {
 			return ref;
 		}
 		if ("type".equals(key)) {
-			ref.setCardType( CardType.MASTERCARD);
+			switch(ref.getCardType()) {
+			case VISA:
+				ref.setCardType(CardType.MASTERCARD);
+				break;
+			case MASTERCARD:
+				ref.setCardType(CardType.VISA);
+			}
 			return ref;
 		}
 		if ("cardNumber".equals(key)) {
