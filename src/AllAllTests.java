@@ -9,6 +9,7 @@ import org.junit.runners.Suite.SuiteClasses;
 		common.AllTests.class,
 		testdata.AllTests.class,
 		xml.AllTests.class,
+		mocking.AllTests.class,
 })
 public class AllAllTests {
 
