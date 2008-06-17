@@ -1,5 +1,7 @@
 package xml;
 
+import static org.junit.Assert.assertNotNull;
+
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -10,12 +12,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
+import org.junit.Test;
 import org.w3c.dom.Document;
 
-import junit.framework.TestCase;
+public class TestXMLValidityWithSchema {
 
-public class TestXMLValidityWithSchema extends TestCase {
-
+	@Test
 	public void testValid() throws Exception {
 		// create a SchemaFactory capable of understanding WXS schemas - from the Javadoc page
 	    SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);

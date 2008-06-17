@@ -1,19 +1,21 @@
 package xml;
 
+import static org.junit.Assert.assertNotNull;
+
 import java.io.ByteArrayInputStream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import junit.framework.TestCase;
-
+import org.junit.Test;
 import org.w3c.dom.Document;
 
-public class TestXMLWellFormed extends TestCase {
+public class TestXMLWellFormed {
 
 	/**
 	 * If it does not throw an Exception, the file is valid
 	 */
+	@Test
 	public void testXmlValid() throws Exception {
 
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -25,6 +27,6 @@ public class TestXMLWellFormed extends TestCase {
 		"<SC>Introduction</SC><p></p></section>";
 		Document document = parser.parse(new ByteArrayInputStream(doc.getBytes()));
 		assertNotNull(document);	// really here to suppress warnings
-		System.err.println("Parsed OK");
+		System.out.println("TestXMLWellFormed.testXmlValid(): Parsed OK");
 	}
 }
