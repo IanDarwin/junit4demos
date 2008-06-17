@@ -1,5 +1,7 @@
 package common;
 
+import org.junit.Test;
+
 import testclasses.CreditCardValidator;
 import testclasses.VisaCardValidator;
 
@@ -19,5 +21,12 @@ public class TestVISACardValidator extends TestCardValidator {
 	public CreditCardValidator getValidator() {
 		return new VisaCardValidator();
 	}
-
+	
+	/** Optional, but allows us to run this class directly using the
+	 * JUnit4 test runner.
+	 */
+	@Test
+	public void dummyTestForSuperclass() {
+		// no code needed
+	}
 }
