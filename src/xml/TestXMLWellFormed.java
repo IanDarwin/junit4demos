@@ -25,6 +25,7 @@ public class TestXMLWellFormed {
 		"<section><sectiontitle>A Discourse of Numbers</sectiontitle>" +
 		"<sectionnumber>1.2</sectionnumber>" +
 		"<SC>Introduction</SC><p></p></section>";
+		System.out.println("TestXMLWellFormed.testXmlValid(): Starting Parse");
 		Document document = parser.parse(new ByteArrayInputStream(doc.getBytes()));
 		assertNotNull(document);	// really here to suppress warnings
 		System.out.println("TestXMLWellFormed.testXmlValid(): Parsed OK");

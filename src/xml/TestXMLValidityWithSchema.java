@@ -17,8 +17,7 @@ import org.w3c.dom.Document;
 
 public class TestXMLValidityWithSchema {
 
-	@Test
-	public void testValid() throws Exception {
+	public @Test void testValid() throws Exception {
 		// create a SchemaFactory capable of understanding WXS schemas - from the Javadoc page
 	    SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 
@@ -39,7 +38,11 @@ public class TestXMLValidityWithSchema {
 		"<section><sectiontitle>A Discourse of Numbers</sectiontitle>" +
 		"<sectionnumber>1.2</sectionnumber>" +
 		"<SC>Introduction</SC><p></p></section>";
+		System.out.println("TestXMLValidityWithSchema.testValid(): parsing");
+		// XXX This will give an error message as we're parsing a Section/Subsection
+		// Document with the "person" schema!
 		Document document = parser.parse(new ByteArrayInputStream(doc.getBytes()));
 		assertNotNull(document);	// really here to suppress warnings
+		System.out.println("TestXMLValidityWithSchema.testValid(): parsed");
 	}
 }
