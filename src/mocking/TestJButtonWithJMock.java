@@ -13,10 +13,6 @@ import org.jmock.MockObjectTestCase;
  */
 public class TestJButtonWithJMock extends MockObjectTestCase {
 
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
 	public void testJButtonListenerGetsNotified() {
 
 		// set up
@@ -30,7 +26,7 @@ public class TestJButtonWithJMock extends MockObjectTestCase {
 		// execute
 		eventSource.doClick();
 
-		// Uncomment this to watch it fail
+		// Uncomment this to watch it fail with "unexpected invocation"
 		// eventSource.doClick();
 	}
 }
