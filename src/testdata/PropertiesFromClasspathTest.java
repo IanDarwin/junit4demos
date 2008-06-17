@@ -1,20 +1,25 @@
 package testdata;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import java.io.InputStream;
 import java.util.Properties;
 
-import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
 
-public class PropertiesFromClasspathTest extends TestCase {
+public class PropertiesFromClasspathTest {
 
 	Properties p = new Properties();
 
-	@Override
+	@Before
 	public void setUp() throws Exception {
 		InputStream is = getClass().getResourceAsStream("test.properties");
 		p.load(is);
 	}
 
+	@Test
 	public void testOne() {
 		assertNotNull(p);
 		assertEquals("Ensure properties loaded",
