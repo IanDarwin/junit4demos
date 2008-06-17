@@ -25,8 +25,8 @@ public class ParameterizedTest {
 		return Arrays.asList(data);					
 	}
 	
-	String s;
-	boolean expected;
+	private String s;
+	private boolean expected;
 	
 	/** Constructor, gets arguments from data array; cast as needed */
 	public ParameterizedTest(Object expected, Object value) {
