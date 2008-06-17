@@ -15,10 +15,6 @@ import org.jmock.MockObjectTestCase;
  */
 public class TestPublisherWithJMock extends MockObjectTestCase {
 
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
 	/** The general contract of a Subscriber */
 	interface Subscriber {
 		public void receive(String message);
@@ -44,10 +40,11 @@ public class TestPublisherWithJMock extends MockObjectTestCase {
 		// To watch it fail, uncomment this line:
 		// message = "mensaje";
 
-		// execute
+		// execute - the purpose of this test
 		publisher.publish(message);
 	}
 
+	// This would normally already exist - the thing we are testing
 	class PublisherImpl implements Publisher {
 
 		List<String> messages = new ArrayList<String>();
@@ -68,6 +65,5 @@ public class TestPublisherWithJMock extends MockObjectTestCase {
 				sub.receive(message);
 			}
 		}
-
 	}
 }
