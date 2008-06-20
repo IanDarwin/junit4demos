@@ -31,7 +31,7 @@ public class TestXPathWithoutXMLUnit {
 		// evaluate the XPath expression against the Document
 		XPath xpath = XPathFactory.newInstance().newXPath();
 		String expression = "/section/sectionnumber";
-		Double secNum = (Double) xpath.evaluate(expression, document, XPathConstants.NUMBER);
+		double secNum = (Double) xpath.evaluate(expression, document, XPathConstants.NUMBER);
 		assertEquals("Section number", 1.2, secNum);
 	}
 
