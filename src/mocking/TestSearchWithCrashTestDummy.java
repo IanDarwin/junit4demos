@@ -5,9 +5,11 @@ import java.util.List;
 import org.junit.Test;
 
 public class TestSearchWithCrashTestDummy {
+	
 	public interface Search {
 		List<Object> search(int category);
 	}
+	
 	public class CrashTestDummySearch implements Search {
 		public List<Object> search(int category) {
 			throw new NoProductFoundException();
@@ -31,8 +33,7 @@ public class TestSearchWithCrashTestDummy {
 		}
 	}
 
-	@SuppressWarnings("serial")
 	class NoProductFoundException extends RuntimeException {
-
+		private static final long serialVersionUID = 1L;
 	}
 }
