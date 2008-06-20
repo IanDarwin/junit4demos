@@ -38,6 +38,12 @@ public class Flight {
 	public void setFlightNumber(int flightNumber) {
 		this.flightNumber = flightNumber;
 	}
+	
+	@Override
+	public String toString() {
+		return company.toString() + flightNumber;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int PRIME = 31;
