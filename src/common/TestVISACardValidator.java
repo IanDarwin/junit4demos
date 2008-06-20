@@ -2,8 +2,8 @@ package common;
 
 import org.junit.Test;
 
-import testclasses.CreditCardValidator;
-import testclasses.VisaCardValidator;
+import domain.CreditCardValidator;
+import domain.VisaCardValidator;
 
 public class TestVISACardValidator extends TestCardValidator {
 

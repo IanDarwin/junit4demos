@@ -1,4 +1,4 @@
-package testclasses;
+package domain;
 
 public enum CardType {
 	VISA,

@@ -4,9 +4,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import testclasses.CardType;
-import testclasses.CreditCardValidator;
-import testclasses.CreditCardValidatorFactory;
+import domain.CardType;
+import domain.CreditCardValidator;
+import domain.CreditCardValidatorFactory;
 
 public class TestCardValidatorByEnum  {
 

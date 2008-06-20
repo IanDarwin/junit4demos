@@ -1,4 +1,4 @@
-package testclasses;
+package domain;
 
 public class CreditCardValidatorFactory {
 	public static CreditCardValidator getValidator(CardType type) {

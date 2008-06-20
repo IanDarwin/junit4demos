@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import testclasses.Foo;
-import testclasses.Util;
+import domain.Foo;
+import domain.Util;
 
 public class WasteOfTime  {
 

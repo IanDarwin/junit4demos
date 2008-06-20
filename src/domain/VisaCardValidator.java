@@ -1,4 +1,4 @@
-package testclasses;
+package domain;
 
 public class VisaCardValidator implements CreditCardValidator {
 

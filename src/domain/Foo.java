@@ -1,4 +1,4 @@
-package testclasses;
+package domain;
 
 public class Foo {
 	public static final int DEFAULT_VALUE = 42;

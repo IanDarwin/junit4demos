@@ -2,7 +2,7 @@ package common;
 
 import org.junit.Test;
 
-import testclasses.Foo;
+import domain.Foo;
 
 public class TestShouldThrow  {
 

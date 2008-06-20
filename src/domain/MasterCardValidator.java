@@ -1,4 +1,4 @@
-package testclasses;
+package domain;
 
 public class MasterCardValidator implements CreditCardValidator {
 	public boolean validate(

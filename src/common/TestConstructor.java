@@ -3,7 +3,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import testclasses.Foo;
+import domain.Foo;
 
 public class TestConstructor  {
 

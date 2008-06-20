@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import testclasses.Foo;
+import domain.Foo;
 
 public class FooTest {
 

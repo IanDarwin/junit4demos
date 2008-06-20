@@ -2,7 +2,7 @@ package common;
 
 import org.junit.Test;
 
-import testclasses.Foo;
+import domain.Foo;
 
 import com.gargoylesoftware.base.testing.EqualsTester;
 

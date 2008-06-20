@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import testclasses.Foo;
+import domain.Foo;
 
 public class TestEquals1  {
 	Foo x, y;

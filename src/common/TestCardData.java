@@ -3,8 +3,8 @@ package common;
 import java.util.Arrays;
 import java.util.List;
 
-import testclasses.CardData;
-import testclasses.CardType;
+import domain.CardData;
+import domain.CardType;
 
 import com.diasparsoftware.util.junit.ValueObjectEqualsTest;
 

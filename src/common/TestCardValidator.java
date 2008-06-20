@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import testclasses.CreditCardValidator;
+import domain.CreditCardValidator;
 
 public abstract class TestCardValidator  {
 

@@ -1,4 +1,4 @@
-package testclasses;
+package domain;
 
 public class CardData {
 	private CardType cardType;
