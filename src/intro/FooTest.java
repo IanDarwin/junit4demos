@@ -38,9 +38,11 @@ public class FooTest {
 		System.out.println("FooTest.foo()");
 	}
 	
-	/** This is a 3.8-style test method */
+	/** This is a 3.8-style test method; it will not get
+	 * run by default when using JUnit 4!
+	 */
 	public void testFoo() {
-		System.out.println("FooTest.testFoo()");
+		fail("FooTest.testFoo()");
 	}
 
 	/** This is missing its @After tag deliberately, to show
