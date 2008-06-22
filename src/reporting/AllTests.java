@@ -5,7 +5,9 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(value=Suite.class)
-@SuiteClasses(value={DummyTest.class, Dummy2Test.class})
+// Ignore DummyTest, as it is intended to fail,
+// to show how reporting deals with failures.
+@SuiteClasses(value={Dummy2Test.class})
 public class AllTests {
 
 	// No actual code needed here, for simple cases

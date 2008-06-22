@@ -12,6 +12,8 @@ import org.junit.runners.Suite.SuiteClasses;
 		xml.AllTests.class,
 		mocking.AllTests.class,
 		hamcrest.AllTests.class,
+		reporting.AllTests.class,
+		suites.AllTests.class,
 })
 public class AllAllTests {
 
