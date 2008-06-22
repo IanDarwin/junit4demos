@@ -7,9 +7,11 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses(value={
 		intro.AllTests.class,
 		common.AllTests.class,
+		io.AllTests.class,
 		testdata.AllTests.class,
 		xml.AllTests.class,
 		mocking.AllTests.class,
+		hamcrest.AllTests.class,
 })
 public class AllAllTests {
 

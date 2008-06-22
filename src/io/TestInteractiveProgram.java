@@ -20,16 +20,23 @@ public class TestInteractiveProgram  {
 		InputStream inf =
 			new ByteArrayInputStream(resultString.getBytes("ISO8859-1"));
 		System.setIn(inf);
-		PasswdReader t = new PasswdReader();
-		String promptResult = t.prompt("Question");
+		PasswordReader t = new ToyPasswordReader();
+		String promptResult = t.prompt("Please enter password for UpdateService");
 		System.out.println();	// fix prompt's line ending
 		System.out.println("Prompt result was: " + promptResult);
 		assertEquals(resultString, promptResult);
 		inf.close();
 	}
+	
+	public interface PasswordReader {		
+		/** Prompt a user, given a prompt string, and return
+		 * what the user types in return to the prompt.
+		 */
+		public String prompt(String promptString) throws IOException;
+	}
 
-	/** Toy PasswdReader, just reads a line from System.in */
-	public class PasswdReader {
+	/** Toy PasswordReader, just reads a line from System.in */
+	public class ToyPasswordReader implements PasswordReader {
 		
 		/** Prompt a user, given a prompt string, and return
 		 * what the user types in return to the prompt.
