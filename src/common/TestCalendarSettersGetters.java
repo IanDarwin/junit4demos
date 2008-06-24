@@ -37,7 +37,7 @@ public class TestCalendarSettersGetters  {
 
 	@Test @SuppressWarnings("deprecation")
 	public void testSetIntInt() {
-		c.set(Calendar.DAY_OF_MONTH, c.get(Calendar.DAY_OF_MONTH) + 30);
+		c.set(Calendar.DAY_OF_MONTH, c.get(Calendar.DAY_OF_MONTH) + 31);
 		assertEquals("set day_of_month rolls month",
 				c.get(Calendar.MONTH), d.getMonth() + 1);
 	}
