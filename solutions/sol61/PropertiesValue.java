@@ -1,4 +1,4 @@
-package ex61;
+package sol61;
 
 public class PropertiesValue {
 

@@ -1,4 +1,4 @@
-package ex21;
+package sol21;
 
 import java.util.Date;
 

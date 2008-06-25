@@ -1,5 +1,4 @@
-package ex61;
-
+package sol61;
 
 import junit.framework.TestCase;
 
