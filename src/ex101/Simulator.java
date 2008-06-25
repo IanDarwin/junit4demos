@@ -2,14 +2,10 @@ package ex101;
 
 public class Simulator {
 
-	HardwareBox box; // object we will mock
+	HardwareBox box = new HardwareBox(); // object we will mock
 
 	public static void main(String[] args) {
-		new Simulator(new HardwareBox()).simulate();
-	}
-
-	public Simulator(HardwareBox box) {
-		this.box = box;
+		new Simulator().simulate();
 	}
 
 	public void simulate() { // method we want to test

@@ -5,10 +5,8 @@ import org.jmock.MockObjectTestCase;
 
 public class SimulatorTest extends MockObjectTestCase {
 
-	public void setUp() throws Exception {
-	}
-
-	public void test1() {
+	public void testSimulator() {
+		
 		// create mock
 		Mock hbmock = mock(HardwareBox.class);
 		HardwareBox hb = (HardwareBox) hbmock.proxy();
@@ -21,8 +19,6 @@ public class SimulatorTest extends MockObjectTestCase {
 
 		// run it
 		new Simulator(hb).simulate();
-
-		hbmock.verify();
 
 	}
 }
