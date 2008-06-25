@@ -2,7 +2,7 @@ package sol101;
 
 /**
  * Part of the assignment is to recognize that you need to change the
- * type HardwareBox from a class to an interface to it can be mocked.
+ * type HardwareBox from a class to an interface so it can be mocked.
  */
 public interface HardwareBox {
 
