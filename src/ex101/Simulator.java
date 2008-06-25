@@ -2,7 +2,7 @@ package ex101;
 
 public class Simulator {
 
-	HardwareBox box;
+	HardwareBox box; // object we will mock
 
 	public static void main(String[] args) {
 		new Simulator(new HardwareBox()).simulate();
@@ -12,7 +12,7 @@ public class Simulator {
 		this.box = box;
 	}
 
-	public void simulate() {
+	public void simulate() { // method we want to test
 		System.out.println("Starting run with " + box.getModel());
 		box.initialize();
 		box.doSomeWork();
