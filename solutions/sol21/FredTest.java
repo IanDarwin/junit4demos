@@ -1,14 +1,12 @@
 package sol21;
 
+import static org.junit.Assert.assertNotNull;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class FredTest extends TestCase {
+public class FredTest {
 
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
+	@Test
 	public void testOne() throws Exception {
 		Fred f = new Fred();
 		assertNotNull(f.getValue());
