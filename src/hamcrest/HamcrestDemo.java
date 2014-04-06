@@ -15,4 +15,13 @@ public class HamcrestDemo {
 		Foo second = new Foo(100);
 		assertThat("equalTo() works", first, equalTo(second));
 	}
+
+	@Test
+	public void testNameConcat() {
+	Person p = new Person("Ian", "Darwin");
+	String f = p.getFullName();
+	assertThat(f, containsString("Ian"));
+	assertThat(f, equalTo("Ian Darwin"));
+	assertThat(f, not(containsString("/"))); // contrived, just shows syntax
+}
 }
