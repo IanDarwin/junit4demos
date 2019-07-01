@@ -28,6 +28,14 @@
 			<version>(4.8,5.0)</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- This one you MUST INSTALL YOURSELF... see the README file! -->
+		<dependency>
+			<groupId>com.diasporasoft</groupId>
+			<artifactId>diasparsoftToolkit</artifactId>
+			<version>0.24.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>commons-collections</groupId>
 			<artifactId>commons-collections</artifactId>

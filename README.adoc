@@ -1,5 +1,18 @@
 = JUnit 4 Demos
 
-These are the demos from Rejminet Groups 2-day JUnit 4 course. They may not be much use on their own.
+These are the demos from Rejminet Group's JUnit 4 course. They may not be much use on their own.
 
 There is no guarantee that they still work, or anything... Use at own risk.
+
+== Setup BEFORE YOU COMPILE
+
+In order to compile, you have to deal with the fact that some of the libraries are not available
+in Maven Central.
+
+Copy and pastethis into a terminal or command window:
+
+	mvn install:install-file -Dfile=lib/diasparsoftToolkit-0.24.jar \
+		-DgroupId=com.diasporasoft \
+		-DartifactId=diasparsoftToolkit \
+		-Dversion=0.24.0 \
+		-Dpackaging=jar
